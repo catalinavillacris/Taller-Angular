@@ -9,6 +9,8 @@ import { Serie } from '../serie';
  export class SerieListComponent implements OnInit {
  
   series: Array<Serie> = [];
+  promedio:number=0;
+  
    constructor() { }
  
   ngOnInit() {

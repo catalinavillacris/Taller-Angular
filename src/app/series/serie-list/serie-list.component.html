@@ -1,3 +1,28 @@
-<p>
-  serie-list works!
-</p>
+<div class="container-fluid">
+  <div>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Channel</th>
+          <th scope="col">Seasons</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+          <tr *ngFor="let serie of series" class="col mb-2">
+            <td> {{serie.id}}</td>
+            <td> {{serie.name}}</td>
+            <td>{{serie.channel}}</td>
+            <td>{{serie.seasons}}</td>
+          </tr>
+        <tr *ngIf="series.length > 0"> </tr>
+        <td colspan="3" class="text-right"><strong>Average Seasons</strong></td>
+        <td>{{ promedio | number:'1.0-2' }}</td>
+
+        
+      </tbody>
+    </table>
+  </div>
+</div>
